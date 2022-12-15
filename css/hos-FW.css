@@ -5,24 +5,19 @@
   margin: 0;
   font-family: inherit;
 }
-
 img, picture, svg, video {
   display: block;
   max-width: 100%;
 }
-
 input, textarea, button, select {
   font: inherit;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   min-height: 100vh;
 }
-
 ul {
   list-style: none;
   margin: 0;
@@ -33,6 +28,14 @@ a {
   color: inherit;
 }
 
+i {
+  font-weight: bold;
+}
+*:focus {
+  outline: none;
+}
+
+/* container  */
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -64,6 +67,251 @@ a {
   }
 }
 /* end global rules */
+
+
+
+/* start variables */
+:root {
+  /* colors  */
+  --page-bg-color: #f1f5f9;
+  --gray-100: #eee;
+  --gray-300: #ccc;
+  --gray-700: #777;
+  --grey-900: #888;
+  --bg-gray-hover: #f6f6f6;
+  --bg-white: #fff;
+
+
+  --my-color: #e65100;
+  --my-alt-color:#c14c06;
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+
+  /* border-radius */
+  --b-rad-s: 6px;
+  --b-rad-m: 10px;
+  --b-rad-l: 100vh;
+  --b-rad-circle: 50%;
+
+  /* transitio  */
+  --transition-dur-short: 0.3s;
+
+  /* font awesome family  */
+  --font-awesome: "font awesome 6 free";
+}
+/* end variables */
+
+
+
+
+
+/* end variables */
+
+
+/* start framework classes */
+
+/* start box  */
+.d-flex {
+  display: flex;
+}
+
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+.align-it-center {
+  display: flex;
+  align-items: center;
+}
+.gap-10 {
+  gap: 10px;
+}
+
+/* end box  */
+
+
+
+/* padding  */
+.p-10 {
+  padding: 10px;
+}
+.p-15{
+  padding: 15px;
+}
+.p-20 {
+  padding: 20px;
+}
+.pk-20 {
+  padding-block: 20px;
+}
+.pl-20 {
+  padding-inline: 20px;
+}
+
+
+
+
+/* margin */
+.m-20 {
+  margin: 20px;
+}
+
+.mk-20 {
+  margin-block: 20px;
+}
+
+.m-center {
+  margin-inline: auto;
+}
+
+.mb-5{
+  margin-bottom: 5px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+/* width classes */
+
+.w-fit {
+  width: fit-content;
+}
+
+.w-full {
+  width: 100%;
+}
+
+
+/* colors */
+
+.bg-gray {
+  /* this will change to name and the color will be variable */
+  background-color: var(--gray-100);
+}
+.bg-w {
+  background-color: var(--bg-white);
+}
+
+.c-mine {
+  color: var(--my-color);
+}
+/* borders  */
+.gray-border {
+  border: 1px solid var(--gray-300);
+}
+
+
+/* border radius */
+.rad-s {
+  border-radius: var(--b-rad-s);
+  -webkit-border-radius: var(--b-rad-s);
+  -moz-border-radius: var(--b-rad-s);
+  -ms-border-radius: var(--b-rad-s);
+  -o-border-radius: var(--b-rad-s);
+}
+.rad-m {
+  border-radius: var(--b-rad-m);
+  -webkit-border-radius: var(--b-rad-m);
+  -moz-border-radius: var(--b-rad-m);
+  -ms-border-radius: var(--b-rad-m);
+  -o-border-radius: var(--b-rad-m);
+}
+.rad-l {
+  border-radius: var(--b-rad-l);
+  -webkit-border-radius: var(--b-rad-l);
+  -moz-border-radius: var(--b-rad-l);
+  -ms-border-radius: var(--b-rad-l);
+  -o-border-radius: var(--b-rad-l);
+}
+.rad-circle {
+  border-radius: var(--b-rad-circle);
+  -webkit-border-radius: var(--b-rad-circle);
+  -moz-border-radius: var(--b-rad-circle);
+  -ms-border-radius: var(--b-rad-circle);
+  -o-border-radius: var(--b-rad-circle);
+}
+
+
+
+/* text formating  */
+.txt-caps {
+  text-transform: capitalize;
+}
+.txt-cen {
+  text-align: center;
+}
+
+
+/* font  */
+
+
+
+
+/* positions */
+.pos-rel {
+  position: relative;
+}
+.pos-abs {
+  position: absolute;
+}
+
+
+
+/* hover and focus  */
+
+.click:hover,
+.active {
+  background-color: var(--bg-gray-hover);
+}
+
+
+/* transitions  */
+.trans-short {
+  transition: var(--transition-dur-short);
+  -webkit-transition: var(--transition-dur-short);
+  -moz-transition: var(--transition-dur-short);
+  -ms-transition: var(--transition-dur-short);
+  -o-transition: var(--transition-dur-short);
+}
+.trans-long {
+  transition: var(--transition-dur-long);
+  -webkit-transition: var(--transition-dur-long);
+  -moz-transition: var(--transition-dur-long);
+  -ms-transition: var(--transition-dur-long);
+  -o-transition: var(--transition-dur-long);
+}
+
+
+
+
+/* media adjust */
+
+@media (max-width:767px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+/* multi classes */
+.between-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+/* end framework classes */
+
+
+
 
 /* ------------copy to CSS------------ */
 /* start variables */
@@ -127,3 +375,4 @@ a {
 
 <!-- /* footer start */ -->
 <!-- /* footer end */ -->
+
