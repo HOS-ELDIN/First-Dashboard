@@ -14,7 +14,7 @@
     <!-- linking font awesome  -->
     <link rel="stylesheet" href="css/all.min.css">
     <!-- linking my framework -->
-    <link rel="stylesheet" href="css/hos-FW.css">
+    <link rel="stylesheet" href="css/dashboard-FW.css">
     <!-- linking main css file -->
     <link rel="stylesheet" href="css/main.css">
     <!-- linking google font (open sans font) -->
@@ -90,7 +90,7 @@
       <main class="pg-content | w-full">
 
         <!-- start header  -->
-        <header class="p-15 bg-w between-flex">
+        <header class=" header | p-15 bg-w space-between">
 
 
           <div class="search | pos-rel">
@@ -101,7 +101,7 @@
           <div class="icons | align-it-center gap-10">
 
             <i class="fa-regular fa-bell fa-lg"></i>
-            <span class="notification | pos-rel " ></span>
+            <span class="notification | pos-rel "></span>
 
             <div class="img">
               <img src="imgs/avatar.png" alt="avatar">
@@ -113,6 +113,125 @@
         </header>
         <!-- end header  -->
 
+
+
+        <!-- start dashboard tab  -->
+
+        <section class="dashboard-tab | p-20 | m-p-10 " id="dashboard">
+          <h1 class="tab-head">dashboard</h1>
+
+          <!-- cards container  -->
+          <div class="two-columns">
+
+            <!-- card one  -->
+            <div class="welcome | card rad-m p-0  ">
+
+              <div class="intro | space-between bg-lite p-20 | m-d-flex m-txt-cen">
+                <div class="head">
+                  <h2>welcome</h2>
+                  <p>Hossam</p>
+                </div>
+                <div class="img | hide-mobile">
+                  <img src="imgs/welcome.png" alt="hi">
+                </div>
+              </div>
+
+              <div class="personal-img | pos-rel rad-circle over-hidden">
+                <img src="imgs/avatar.png" alt="logo">
+              </div>
+              <div class="info | space-around align-it-center txt-cen txt-caps p-20 mb-20 gray-border | m-d-flex ">
+                <div>
+                  <h3>hossam eldin</h3>
+                  <p>developer</p>
+                </div>
+                <div>
+                  <h3>80</h3>
+                  <p>projects</p>
+                </div>
+                <div>
+                  <h3>$8500</h3>
+                  <p>earned isa</p>
+                </div>
+              </div>
+              <a class="welcome-btn main-btn | m-m-cen" href="profile.html">profile</a>
+            </div>
+
+
+            <!-- card two  -->
+            <div class="draft | card rad-m">
+              <h2>quick draft</h2>
+              <p>write A Draft For Your Ideas</p>
+              <form class="d-flex-col gap-20 ">
+                <input class="bg-input p-10 rad-s" type="text" placeholder="title">
+                <textarea class="bg-input p-10 rad-s" name="your thought" placeholder="your thought"></textarea>
+                <input class="main-btn | m-m-cen" type="submit" value="save">
+              </form>
+            </div>
+
+
+            <!-- card three -->
+            <div class="targets | card rad-m">
+              <h2>yearly targets </h2>
+              <p>Targets Of The Year</p>
+              <div class="content | d-flex-col gap-20">
+
+                <div class="target | d-flex gap-20">
+                  <div class="icon | blue justify-center align-it-center">
+                    <i class="fa-solid fa-dollar-sign fa-lg"></i>
+                  </div>
+
+                  <div class="holder | d-flex-col space-around">
+                    <p class="c-gray txt-caps fs-14 ">money</p>
+                    <span class="fw-bold">$20.000</span>
+                    <div class="prog | blue">
+                      <span class="bg-blue" style="width: 80%;" data-progress="80%"></span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="target | d-flex gap-20">
+                  <div class="icon | orange justify-center align-it-center">
+                    <i class="fa-solid fa-code fa-lg"></i>
+                  </div>
+
+
+                  <div class="holder | d-flex-col space-around">
+                    <p class="c-gray txt-caps fs-14 ">projects</p>
+                    <span class="fw-bold">24</span>
+                    <div class="prog | orange">
+                      <span class="bg-orange" style="width: 55%;" data-progress="55%"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="target | d-flex gap-20">
+                  <div class="icon | green justify-center align-it-center">
+                    <i class="fa-solid fa-user fa-lg"></i>
+                  </div>
+
+
+                  <div class="holder | d-flex-col space-around">
+                    <p class="c-gray txt-caps fs-14 ">team</p>
+                    <span class="fw-bold">12</span>
+                    <div class="prog | green">
+                      <span class="bg-green" style="width: 75%;" data-progress="75%"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </section>
+
+
+
+
+
+
+        <!-- end dashboard tab  -->
 
 
 

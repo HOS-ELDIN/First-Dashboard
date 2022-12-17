@@ -1,16 +1,30 @@
 /* start global rules */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: inherit;
 }
-img, picture, svg, video {
+img,
+picture,
+svg,
+video {
   display: block;
   max-width: 100%;
 }
-input, textarea, button, select {
+input,
+textarea,
+button,
+select {
   font: inherit;
+  border: none;
+}
+*::placeholder {
+  text-transform: capitalize;
+  font-size: 14px;
+  color: var(--gray-900);
 }
 html {
   scroll-behavior: smooth;
@@ -68,27 +82,30 @@ i {
 }
 /* end global rules */
 
-
-
 /* start variables */
 :root {
   /* colors  */
   --page-bg-color: #f1f5f9;
+  --box-shadow-gray: #ddd;
   --gray-100: #eee;
   --gray-300: #ccc;
   --gray-700: #777;
-  --grey-900: #888;
+  --gray-900: #888;
   --bg-gray-hover: #f6f6f6;
   --bg-white: #fff;
 
-
   --my-color: #e65100;
-  --my-alt-color:#c14c06;
+  --my-alt-color: #c14c06;
+  --my-lite-color: rgba(230, 81, 0, 0.4);
   --blue-color: #0075ff;
+  --blue-bg: rgb(0 117 255 / 20%);
   --blue-alt-color: #0d69d5;
   --orange-color: #f59e0b;
+  --orange-bg: rgb(245 158 11 / 20%);
   --green-color: #22c55e;
+  --green-bg: rgb(34 197 94 / 20%);
   --red-color: #f44336;
+  --red-bg: #f44336;
 
   /* border-radius */
   --b-rad-s: 6px;
@@ -96,20 +113,13 @@ i {
   --b-rad-l: 100vh;
   --b-rad-circle: 50%;
 
-  /* transitio  */
+  /* transition  */
   --transition-dur-short: 0.3s;
 
   /* font awesome family  */
   --font-awesome: "font awesome 6 free";
 }
 /* end variables */
-
-
-
-
-
-/* end variables */
-
 
 /* start framework classes */
 
@@ -118,28 +128,48 @@ i {
   display: flex;
 }
 
-
 .justify-center {
   display: flex;
   justify-content: center;
+}
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+.space-around {
+  display: flex;
+  justify-content: space-around;
 }
 .align-it-center {
   display: flex;
   align-items: center;
 }
+
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .gap-10 {
   gap: 10px;
 }
-
+.gap-20 {
+  gap: 20px;
+}
+.d-block {
+  display: block;
+}
 /* end box  */
 
-
-
 /* padding  */
+
+.p-0 {
+  padding: 0 !important;
+}
 .p-10 {
   padding: 10px;
 }
-.p-15{
+.p-15 {
   padding: 15px;
 }
 .p-20 {
@@ -152,10 +182,7 @@ i {
   padding-inline: 20px;
 }
 
-
-
-
-/* margin */
+/* margins */
 .m-20 {
   margin: 20px;
 }
@@ -168,8 +195,11 @@ i {
   margin-inline: auto;
 }
 
-.mb-5{
+.mb-5 {
   margin-bottom: 5px;
+}
+.mb-10 {
+  margin-bottom: 10px;
 }
 .mb-20 {
   margin-bottom: 20px;
@@ -184,28 +214,57 @@ i {
   width: 100%;
 }
 
-
 /* colors */
 
-.bg-gray {
+.bg-lite {
   /* this will change to name and the color will be variable */
-  background-color: var(--gray-100);
+  /* background-color: var(--gray-100); */
+  background-color: var(--my-lite-color);
+}
+.bg-input {
+  /* this will change to name and the color will be variable */
+  /* background-color: var(--gray-100); */
+  background-color: var(--my-lite-color);
+  caret-color: var(--my-alt-color);
 }
 .bg-w {
   background-color: var(--bg-white);
+}
+.bg-blue {
+  background-color: var(--blue-color);
+}
+.bg-orange {
+  background-color: var(--orange-color);
+}
+.bg-green {
+  background-color: var(--green-color);
 }
 
 .c-mine {
   color: var(--my-color);
 }
+.c-blue {
+  color: var(--blue-color);
+}
+.c-orange {
+  color: var(--orange-color);
+}
+.c-green {
+  color: var(--green-color);
+}
+
+.c-gray {
+  color: var(--gray-700);
+}
+
 /* borders  */
 .gray-border {
   border: 1px solid var(--gray-300);
 }
 
-
 /* border radius */
 .rad-s {
+  /* 6px  */
   border-radius: var(--b-rad-s);
   -webkit-border-radius: var(--b-rad-s);
   -moz-border-radius: var(--b-rad-s);
@@ -213,6 +272,7 @@ i {
   -o-border-radius: var(--b-rad-s);
 }
 .rad-m {
+  /* 10px */
   border-radius: var(--b-rad-m);
   -webkit-border-radius: var(--b-rad-m);
   -moz-border-radius: var(--b-rad-m);
@@ -220,6 +280,7 @@ i {
   -o-border-radius: var(--b-rad-m);
 }
 .rad-l {
+  /* oval  */
   border-radius: var(--b-rad-l);
   -webkit-border-radius: var(--b-rad-l);
   -moz-border-radius: var(--b-rad-l);
@@ -234,8 +295,6 @@ i {
   -o-border-radius: var(--b-rad-circle);
 }
 
-
-
 /* text formating  */
 .txt-caps {
   text-transform: capitalize;
@@ -244,11 +303,17 @@ i {
   text-align: center;
 }
 
+/* fonts  */
 
-/* font  */
+/* sizes */
+.fs-14 {
+  font-size: 14px;
+}
 
-
-
+/* weight */
+.fw-bold {
+  font-weight: bold;
+}
 
 /* positions */
 .pos-rel {
@@ -258,15 +323,18 @@ i {
   position: absolute;
 }
 
-
+/* overflow  */
+.over-hidden {
+  overflow: hidden;
+}
 
 /* hover and focus  */
 
 .click:hover,
 .active {
-  background-color: var(--bg-gray-hover);
+  /* background-color: var(--bg-gray-hover); */
+  background-color: var(--my-lite-color);
 }
-
 
 /* transitions  */
 .trans-short {
@@ -284,95 +352,30 @@ i {
   -o-transition: var(--transition-dur-long);
 }
 
-
-
-
 /* media adjust */
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .hide-mobile {
     display: none;
+  }
+  .m-d-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .m-txt-cen {
+    text-align: center;
+  }
+  .m-m-cen {
+    margin-inline: auto !important;
+  }
+  .m-p-5 {
+    padding: 5px;
+  }
+  .m-p-10 {
+    padding: 10px;
   }
 }
 
 /* multi classes */
-.between-flex{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-
-
-
-
-
 
 /* end framework classes */
-
-
-
-
-/* ------------copy to CSS------------ */
-/* start variables */
-/* end variables */
-
-/* start global rules */
-/* body {
-  font-family: "Work Sans", sans-serif;
-} */
-/* end global rules */
-
-/* start component */
-/* end component */
-
-/* start header */
-/* end header */
-
-/* start landing section  */
-/* end landing section  */
-
-/* strat features */
-/* end features */
-
-/* start of services */
-/* end of services */
-
-/* start of portfolio */
-/* end of portfolio */
-
-/* start of about */
-/* end of about */
-
-/* start of contact */
-/* end of contact */
-
-/* footer start */
-/* footer end */
-
-
-/* ------------copy to HTML----------- */
-<!-- /* start header */ -->
-<!-- /* end header */ -->
-
-<!-- /* start landing section  */ -->
-<!-- /* end landing section  */ -->
-
-<!-- /* strat features */ -->
-<!-- /* end features */ -->
-
-<!-- /* start of services */ -->
-<!-- /* end of services */ -->
-
-<!-- /* start of portfolio */ -->
-<!-- /* end of portfolio */ -->
-
-<!-- /* start of about */ -->
-<!-- /* end of about */ -->
-
-<!-- /* start of contact */ -->
-<!-- /* end of contact */ -->
-
-<!-- /* footer start */ -->
-<!-- /* footer end */ -->
-
