@@ -238,9 +238,7 @@ i {
   width: 100%;
 }
 
-.square {
-  aspect-ratio: 1;
-}
+
 
 .svg-size {
   width: 40px;
@@ -338,7 +336,10 @@ i {
   -moz-border-radius: var(--b-rad-circle);
   -ms-border-radius: var(--b-rad-circle);
   -o-border-radius: var(--b-rad-circle);
+  aspect-ratio: 1;
 }
+
+
 
 /* text formating  */
 .txt-caps {
@@ -399,6 +400,7 @@ i {
 
 .delete:hover {
   color: var(--red-color);
+  cursor: pointer;
 }
 
 /* transitions  */
