@@ -21,7 +21,8 @@
   --green-color: #22c55e;
   --green-bg: rgb(34 197 94 / 20%);
   --red-color: #f44336;
-  --red-bg: #f44336;
+  --red-bg: rgb(244 64 52 / 20%);
+  --black-color:black;
 
   /* border-radius */
   --b-rad-s: 6px;
@@ -78,7 +79,7 @@ body {
 @media (max-width: 767px) {
   .two-columns {
     grid-template-columns: minmax(200px, 1fr);
-    gap: .625rem;
+    gap: 0.625rem;
   }
 }
 
@@ -87,7 +88,12 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.25rem;
 }
-
+@media (max-width: 767px) {
+  .three-columns {
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 0.625rem;
+  }
+}
 /* cards  */
 .card {
   background-color: var(--bg-white);
@@ -379,5 +385,96 @@ header .icons .img {
   border-color: transparent;
   border-top-color: inherit;
 }
+
+/* card four stats */
+.dashboard-tab .stats .stats-content {
+  display: grid;
+  /* grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); */
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 767px) {
+  .dashboard-tab .stats .stats-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* card five news */
+.dashboard-tab .news .article:not(:last-child) {
+  border-bottom: 1px solid var(--gray-300);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.dashboard-tab .news .article .img {
+  width: 100px;
+}
+
+/* card six tasks */
+.dashboard-tab .tasks .finished {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+/* card nine project*/
+.dashboard-tab .progress .pro-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 170px;
+  opacity: .3;
+}
+.dashboard-tab .progress ul {
+  isolation: isolate;
+}
+.dashboard-tab .progress ul:before {
+  content: "";
+  position: absolute;
+  height: calc(100% - 10px);
+  width: 2px;
+  background-color: var(--my-color);
+  z-index: -1;
+  left: 8px;
+  top: 0;
+}
+
+.progress .dot {
+  --dot-width: 18px;
+  min-width: var(--dot-width);
+  border: 3px solid white;
+  outline: 2px solid var(--my-color);
+  margin-block: auto;
+}
+.done {
+  background-color: var(--my-color);
+}
+.in-progress {
+  background-color: var(--orange-color);
+
+  animation: blinking 1.2s infinite alternate;
+  -webkit-animation: blinking 1.2s infinite alternate;
+}
+.not-yet {
+  background-color: var(--bg-white);
+}
+@keyframes blinking {
+  100% {
+    background-color: white;
+  }
+}
+
+/* card ten reminders  */
+
+.reminders .dot {
+  min-width: 15px;
+  margin-block: auto;
+}
+
+.reminders .info {
+  border-left: 2px solid;
+  border-color: inherit;
+  padding-left: 15px;
+
+}
+
 
 /* end main  */
