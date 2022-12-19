@@ -22,7 +22,7 @@
   --green-bg: rgb(34 197 94 / 20%);
   --red-color: #f44336;
   --red-bg: rgb(244 64 52 / 20%);
-  --black-color:black;
+  --black-color: black;
 
   /* border-radius */
   --b-rad-s: 6px;
@@ -32,6 +32,7 @@
 
   /* transition  */
   --transition-dur-short: 0.3s;
+  --transition-dur-long: 1.2s;
 
   /* font awesome family  */
   --font-awesome: "font awesome 6 free";
@@ -43,6 +44,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 /* end global rules */
+
 /* start component */
 
 /* tab head  */
@@ -284,6 +286,8 @@ header .icons span::after {
   -o-border-radius: var(--b-rad-circle);
   top: -15px;
   right: 8px;
+  animation: blinking 1s infinite alternate;
+  -webkit-animation: blinking 1s infinite alternate;
 }
 header .icons .img {
   width: 32px;
@@ -421,7 +425,7 @@ header .icons .img {
   bottom: 0;
   right: 0;
   width: 170px;
-  opacity: .3;
+  opacity: 0.3;
 }
 .dashboard-tab .progress ul {
   isolation: isolate;
@@ -449,9 +453,8 @@ header .icons .img {
 }
 .in-progress {
   background-color: var(--orange-color);
-
-  animation: blinking 1.2s infinite alternate;
-  -webkit-animation: blinking 1.2s infinite alternate;
+  animation: blinking 0.8s infinite alternate;
+  -webkit-animation: blinking 0.8s infinite alternate;
 }
 .not-yet {
   background-color: var(--bg-white);
@@ -463,7 +466,6 @@ header .icons .img {
 }
 
 /* card ten reminders  */
-
 .reminders .dot {
   min-width: 15px;
   margin-block: auto;
@@ -473,8 +475,106 @@ header .icons .img {
   border-left: 2px solid;
   border-color: inherit;
   padding-left: 15px;
-
+}
+/* card eleven post */
+.dashboard-tab .post .img {
+  width: 48px;
+}
+/* card twelve social media */
+.dashboard-tab .social .platform i {
+  width: 50px;
+  aspect-ratio: 1;
+}
+.dashboard-tab .social .platform i:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+.dashboard-tab .social .platform .link a {
+  margin-right: 10px;
 }
 
+/* projects */
+.dashboard-tab .projects .responsive-table {
+  overflow-x: auto;
+}
+.dashboard-tab .projects .responsive-table table {
+  border-spacing: 0;
+  min-width: 1000px;
+}
+.dashboard-tab .projects .responsive-table td {
+  padding: 15px;
+  text-transform: capitalize;
+}
+.dashboard-tab .projects .responsive-table thead td {
+  background-color: var(--my-lite-color);
+  font-weight: bold;
+}
+.dashboard-tab .projects .responsive-table tbody tr {
+  transition: var(--transition-dur-short);
+  -webkit-transition: var(--transition-dur-short);
+  -moz-transition: var(--transition-dur-short);
+  -ms-transition: var(--transition-dur-short);
+  -o-transition: var(--transition-dur-short);
+}
+.dashboard-tab .projects .responsive-table tbody tr:hover {
+  background-color: var(--orange-bg);
+}
 
+.dashboard-tab .projects .responsive-table tbody td {
+  border-bottom: 1px solid var(--my-lite-color);
+  border-left: 1px solid var(--my-lite-color);
+}
+.dashboard-tab .projects .responsive-table tr td:last-child {
+  border-right: 1px solid var(--my-lite-color);
+  text-align: center;
+}
+.dashboard-tab .projects .responsive-table tbody td:nth-child(5) {
+  display: flex;
+}
+.dashboard-tab .projects .responsive-table tbody td img {
+  width: 35px;
+  aspect-ratio: 1;
+  border: 3px solid var(--bg-white);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: var(--transition-dur-short);
+  -webkit-transition: var(--transition-dur-short);
+  -moz-transition: var(--transition-dur-short);
+  -ms-transition: var(--transition-dur-short);
+  -o-transition: var(--transition-dur-short);
+}
+.dashboard-tab .projects .responsive-table tbody td img:not(:first-child) {
+  margin-left: -15px;
+}
+.dashboard-tab .projects .responsive-table tbody td:nth-child(5):hover img:not(:first-child) {
+  margin-left: -10px;
+}
+.dashboard-tab .projects .label {
+  font-size: 13px;
+  color: var(--bg-white);
+  padding: 4px 10px;
+  border-radius: var(--b-rad-s);
+  -webkit-border-radius: var(--b-rad-s);
+  -moz-border-radius: var(--b-rad-s);
+  -ms-border-radius: var(--b-rad-s);
+  -o-border-radius: var(--b-rad-s);
+}
+.dashboard-tab .projects .pending {
+  background-color: var(--orange-color);
+}
+.dashboard-tab .projects .ongoing {
+  background-color: var(--blue-color);
+}
+.dashboard-tab .projects .completed {
+  background-color: var(--green-color);
+}
+.dashboard-tab .projects .rejected {
+  background-color: var(--red-color);
+}
 /* end main  */
