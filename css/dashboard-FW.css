@@ -90,7 +90,7 @@ i {
   --gray-100: #eee;
   --gray-300: #ccc;
   --gray-700: #777;
-  --gray-900: #888;
+  --gray-900: #555;
   --bg-gray-hover: #f6f6f6;
   --bg-white: #fff;
 
@@ -116,7 +116,7 @@ i {
 
   /* transition  */
   --transition-dur-short: 0.3s;
-  --transition-dur-long: 2s;
+  --transition-dur-long: 1.2s;
 
   /* font awesome family  */
   --font-awesome: "font awesome 6 free";
@@ -129,7 +129,6 @@ i {
 .d-flex {
   display: flex;
 }
-
 .justify-center {
   display: flex;
   justify-content: center;
@@ -146,10 +145,15 @@ i {
   display: flex;
   align-items: center;
 }
-
 .d-flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gap-10 {
@@ -161,6 +165,7 @@ i {
 .gap-20 {
   gap: 20px;
 }
+
 .d-block {
   display: block;
 }
@@ -183,19 +188,19 @@ i {
 .p-20 {
   padding: 20px;
 }
+.pb-20 {
+  padding-bottom: 20px;
+}
 .pk-20 {
   padding-block: 20px;
 }
 .pl-20 {
   padding-inline: 20px;
 }
-
-.pb-20 {
-  padding-bottom: 20px;
-}
 .p-data {
   padding: 4px 6px;
 }
+
 /* margins */
 .m-20 {
   margin: 20px;
@@ -234,18 +239,17 @@ i {
 .w-fit {
   width: fit-content;
 }
-
 .w-full {
   width: 100%;
 }
-
-
 
 .svg-size {
   width: 40px;
   aspect-ratio: 1;
   max-width: 40px;
 }
+
+
 /* colors */
 
 .bg-lite {
@@ -313,18 +317,15 @@ i {
 .c-red {
   color: var(--red-color);
 }
-
 .c-gray {
   color: var(--gray-700);
 }
-
 .c-black {
   color: var(--black-color);
 }
 .c-white {
   color: var(--bg-white);
 }
-
 .c-twitter {
   color: #1da1f2;
 }
@@ -338,18 +339,13 @@ i {
   color: #0077b5;
 }
 
-
-
 /* borders  */
 .gray-border {
   border: 1px solid var(--gray-300);
 }
-
 .border-bottom {
   border-bottom: 1px solid var(--gray-300);
 }
-
-
 
 /* border radius */
 .rad-s {
@@ -386,7 +382,6 @@ i {
 }
 
 
-
 /* text formating  */
 .txt-caps {
   text-transform: capitalize;
@@ -413,6 +408,10 @@ i {
   /* font-size: 15px; */
   font-size: 0.938rem;
 }
+.fs-16 {
+  /* font-size: 16px; */
+  font-size: 1rem;
+}
 .fs-25 {
   /* font-size: 25px; */
   font-size: 1.563rem;
@@ -424,7 +423,6 @@ i {
 }
 
 /* rtl  */
-
 .rtl {
   direction: rtl;
 }
@@ -445,17 +443,12 @@ i {
 }
 
 /* hover and focus  */
-
 .click:hover,
 .active {
   /* background-color: var(--bg-gray-hover); */
   background-color: var(--my-lite-color);
 }
 
-.delete:hover {
-  color: var(--red-color);
-  cursor: pointer;
-}
 
 /* transitions  */
 .trans-short {
@@ -516,7 +509,7 @@ i {
   }
 
 
-  
+
 }
 
 /* multi classes */
