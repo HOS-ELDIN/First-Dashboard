@@ -124,8 +124,21 @@
             <div class="site-control | card rad-m">
               <h2>Site Control</h2>
               <p>Control The Website If There Is Maintenance</p>
-
-
+              <div class="website-control | space-between align-it-center mb-20">
+                <div>
+                  <span class=" d-block mb-10 c-mine txt-caps">website control</span>
+                  <p class="txt-caps c-gray fs-13">Open/Close Website And Type The Reason</p>
+                </div>
+                <div class="toggle">
+                  <label>
+                    <input type="checkbox" class="toggle-check" name="hos" checked>
+                    <div class="toggle-sw">
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <textarea class=" bg-input w-full gray-border p-10 rad-s h-150 no-resize "
+                placeholder="close message content"></textarea>
             </div>
 
 
@@ -133,8 +146,22 @@
             <div class="general-info | card rad-m">
               <h2>general info </h2>
               <p>General Information About Your Account</p>
+              <form>
+                <label class="d-block txt-caps c-mine mb-5 fs-14" for="first">first name</label>
+                <input class="w-full gray-border p-10 mb-20 rad-m  bg-input" type="text" id="first"
+                  placeholder="First Name">
 
+                <label class="d-block txt-caps c-mine mb-5 fs-14" for="last">last name</label>
+                <input class="w-full gray-border p-10 mb-20 rad-m bg-input" type="text" id="last"
+                  placeholder="last Name">
 
+                <label class="d-block c-mine mb-5 fs-14" for="mail">Email</label>
+                <div class="align-it-center gap-10">
+                  <input class="w-full gray-border p-10 rad-m small-hold" type="email" id="mail"
+                    placeholder="eng.hos.eldin@gmail.com" disabled>
+                  <a class="c-mine fw-bold " href="#">Change</a>
+                </div>
+              </form>
             </div>
 
 
@@ -143,13 +170,116 @@
               <h2>Security Info</h2>
               <p>Security Information About Your Account</p>
 
+              <div class="password | space-between align-it-center mb-20 pb-20 border-bottom">
+                <div>
+                  <span class=" d-block mb-10 c-mine txt-caps">password</span>
+                  <span class="txt-caps c-gray fs-13">Last Change On 25/10/2021</span>
+                </div>
+                <div>
+                  <a class="main-btn fs-16 " href="#">change</a>
+                </div>
+              </div>
+
+              <div class="two-factor | space-between align-it-center mb-20 pb-20 border-bottom">
+                <div>
+                  <span class=" d-block mb-10 c-mine txt-caps">Two-Factor Authentication</span>
+                  <span class="txt-caps c-gray fs-13">Enable/Disable The Feature</span>
+                </div>
+                <div class="toggle">
+                  <label>
+                    <input type="checkbox" class="toggle-check" name="hos">
+                    <div class="toggle-sw">
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="devices | space-between align-it-center">
+                <div>
+                  <span class=" d-block mb-10 c-mine txt-caps">devices</span>
+                  <span class="txt-caps c-gray fs-13">Check The Login Devices List</span>
+                </div>
+                <div>
+                  <label>
+                    <a class="label fs-16" href="#">Devices</a>
+                  </label>
+                </div>
+              </div>
 
             </div>
 
             <!-- card four social -->
-            <div class="Social-Info | card rad-m">
+            <div class="social-info | card rad-m">
               <h2>Social Info</h2>
               <p>Social Media Information</p>
+              <form class="d-flex-col gap-15">
+
+                <div class="holder | d-flex gray-border rad-m over-hidden">
+                  <i class="fa-brands fa-twitter center-flex c-white p-10 bg-twitter"></i>
+                  <input class="w-full p-10 bg-twitter-lite"  type="text" placeholder="twitter username">
+                </div>
+
+                <div class="holder | d-flex gray-border rad-m over-hidden">
+                  <i class="fa-brands fa-facebook-f center-flex c-white p-10 bg-face"></i>
+                  <input class="w-full p-10  bg-face-lite"  type="text" placeholder="facebook username">
+                </div>
+
+                <div class="holder | d-flex gray-border rad-m over-hidden">
+                  <i class="fa-brands fa-linkedin center-flex c-white p-10 bg-linked"></i>
+                  <input class="w-full p-10 bg-linked-lite"  type="text" placeholder="linkedin username">
+                </div>
+
+                <div class="holder | d-flex gray-border rad-m over-hidden">
+                  <i class="fa-brands fa-youtube center-flex c-white p-10 bg-youtube"></i>
+                  <input class="w-full p-10 bg-youtube-lite"  type="text" placeholder="youtube username">
+                </div>
+
+
+              </form>
+
+            </div>
+
+            <!-- card five Widgets Control -->
+            <div class="widgets-conrol | card rad-m">
+              <h2>Widgets Control</h2>
+              <p>Show/Hide Widgets</p>
+              <ul class="d-flex-col gap-20">
+                <li class="align-it-center">
+                  <input type="checkbox"id="1">
+                  <label for="1">Quick Draft</label>
+                </li>
+                <li class="align-it-center">
+                  <input type="checkbox"id="2">
+                  <label for="2">Yearly Targets</label>
+                </li>
+                <li class="align-it-center">
+                  <input type="checkbox"id="3">
+                  <label for="3">Tickets Statistics</label>
+                </li>
+                <li class="align-it-center">
+                  <input type="checkbox"id="4">
+                  <label for="4">Latest News</label>
+                </li>
+                <li class="align-it-center">
+                  <input type="checkbox"id="5">
+                  <label for="5">Latest Tasks</label>
+                </li>
+                <li class="align-it-center">
+                  <input type="checkbox"id="6">
+                  <label for="6">Top Search Items</label>
+                </li>
+              </ul>
+
+
+
+            </div>
+
+            <!-- card six Backup Manager -->
+            <div class="social-info | card rad-m">
+              <h2>Backup Manager</h2>
+              <p>Control Backup Time And Location</p>
+
+
 
 
             </div>

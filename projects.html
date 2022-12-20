@@ -1,12 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- metas -->
+    <meta name=”robots” content="index, follow">
+    <meta name="description" content=" this is a personal Dashboard Projects page">
+    <meta name="keywords" content=" personal web developing Dashboard">
+    <!-- linking normalize reset  -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- linking font awesome  -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- linking my framework -->
+    <link rel="stylesheet" href="css/dashboard-FW.css">
+    <!-- linking main css file -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- linking google font (open sans font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet">
+    <title>Hos Dashboard Projects</title>
+  </head>
+
+  <body>
+    <div class="page | d-flex">
+
+      <!-- start side-bar -->
+      <asid class="side-bar | pos-rel p-20 bg-w">
+        <div class="logo | m-center mk-20"><a href="#"><img src="imgs/logo-final2.png" alt="logo-hossam eldin "></a>
+        </div>
+        <h3 class="pos-rel w-fit m-center mk-20 c-mine hide-mobile">Hossam Eldin</h3>
+        <ul class="pgs | pk-20 ">
+          <li>
+            <a class=" | txt-caps d-flex click rad-s p-10 mb-5 gap-10 trans-long" href="index.html">
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span class="hide-mobile">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a class=" | txt-caps d-flex click rad-s p-10 mb-5 gap-10 trans-short" href="settings.html">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span class="hide-mobile">settings</span>
+            </a>
+          </li>
+          <li>
+            <a class="txt-caps d-flex click rad-s p-10 mb-5 gap-10 trans-short" href="profile.html">
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span class="hide-mobile">profile</span>
+            </a>
+          </li>
+          <li>
+            <a class="active | txt-caps d-flex click rad-s p-10 mb-5 gap-10 trans-short" href="projects.html">
+              <i class="fa-solid fa-diagram-project fa-fw"></i>
+              <span class="hide-mobile">projects</span>
+            </a>
+          </li>
+          <li>
+            <a class="txt-caps d-flex click rad-s p-10 mb-5 gap-10 trans-short" href="courses.html">
+              <i class="fa-solid fa-graduation-cap fa-fw"></i>
+              <span class="hide-mobile">courses</span>
+            </a>
+          </li>
+          <li>
+            <a class="txt-caps d-flex click rad-s p-10 mb-5 gap-10 trans-short" href="friends.html">
+              <i class="fa-regular fa-circle-user fa-fw"></i>
+              <span class="hide-mobile">friends</span>
+            </a>
+          </li>
+          <li>
+            <a class="txt-caps d-flex click rad-s p-10 mb-5 gap-10 trans-short" href="files.html">
+              <i class="fa-regular fa-file fa-fw"></i>
+              <span class="hide-mobile">files</span>
+            </a>
+          </li>
+          <li>
+            <a class="txt-caps d-flex click rad-s p-10 mb-5 gap-10 trans-short" href="plans.html">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span class="hide-mobile">plans</span>
+            </a>
+          </li>
+        </ul>
+      </asid>
+      <!-- end side-bar -->
+
+      <main class="pg-content | w-full over-hidden">
+
+        <!-- start header  -->
+        <header class=" header | p-15 bg-w space-between">
+
+
+          <div class="search | pos-rel">
+            <input class="p-10 rad-m gray-border" type="search" placeholder="type a keyword">
+          </div>
+
+
+          <div class="icons | align-it-center gap-10">
+
+            <i class="fa-regular fa-bell fa-lg"></i>
+            <span class="notification | pos-rel "></span>
+
+            <div class="img">
+              <img src="imgs/avatar.png" alt="avatar">
+            </div>
+
+          </div>
+
+
+        </header>
+        <!-- end header  -->
+
+        <!-- start setting tab  -->
+        <section class="dashboard-tab | p-20 | m-p-10 " id="dashboard">
+          <h1 class="tab-head">Projects</h1>
+
+          <!-- cards container  -->
+          <div class="two-columns | mb-20 | m-mb-10">
+
+            <!-- card one side control -->
+            <div class="site-control | card rad-m">
+              <h2>Site Control</h2>
+              <p>Control The Website If There Is Maintenance</p>
+
+
+            </div>
+
+
+            <!-- card two general info -->
+            <div class="general-info | card rad-m">
+              <h2>general info </h2>
+              <p>General Information About Your Account</p>
+
+
+            </div>
+
+
+            <!-- card three security -->
+            <div class="Security-Info | card rad-m">
+              <h2>Security Info</h2>
+              <p>Security Information About Your Account</p>
+
+
+            </div>
+
+            <!-- card four social -->
+            <div class="Social-Info | card rad-m">
+              <h2>Social Info</h2>
+              <p>Social Media Information</p>
+
+
+            </div>
+
+          </div>
+        </section>
+        <!-- end dashboard tab  -->
+
+      </main>
+    </div>
+
+
+
+
+
+
+  </body>
+
 </html>

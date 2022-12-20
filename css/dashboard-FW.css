@@ -156,6 +156,9 @@ i {
   justify-content: center;
 }
 
+.gap-5 {
+  gap: 5px;
+}
 .gap-10 {
   gap: 10px;
 }
@@ -202,6 +205,12 @@ i {
 }
 
 /* margins */
+.m-10 {
+  margin: 10px;
+}
+.m-15 {
+  margin: 15px;
+}
 .m-20 {
   margin: 20px;
 }
@@ -249,6 +258,15 @@ i {
   max-width: 40px;
 }
 
+/* heights classes */
+
+.h-150 {
+  height: 150px;
+}
+
+.no-resize {
+  resize: none;
+}
 
 /* colors */
 
@@ -410,7 +428,7 @@ i {
 }
 .fs-16 {
   /* font-size: 16px; */
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 .fs-25 {
   /* font-size: 25px; */
@@ -425,6 +443,18 @@ i {
 /* rtl  */
 .rtl {
   direction: rtl;
+}
+
+/* inputs */
+/* ::placeholder  */
+.gray-hold::placeholder {
+  color: var(--gray-900);
+}
+.small-hold::placeholder {
+  text-transform: lowercase;
+}
+.cap-hold::placeholder {
+  text-transform: uppercase;
 }
 
 
