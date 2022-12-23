@@ -23,7 +23,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet">
-    <title>Hos Dashboard Profile</title>
+    <title>Hossam's Profile</title>
   </head>
 
   <body>
@@ -114,59 +114,193 @@
         </header>
         <!-- end header  -->
 
-        <!-- start setting tab  -->
-        <section class="dashboard-tab | p-20 | m-p-10 " id="dashboard">
+        <!-- start profile tab  -->
+        <section class="profile-tab | p-20 | m-p-10 ">
           <h1 class="tab-head">Profile</h1>
 
           <!-- cards container  -->
-          <div class="two-columns | mb-20 | m-mb-10">
+          <div class="profile-content">
 
             <!-- card one side control -->
-            <div class="site-control | card rad-m">
-              <h2>Site Control</h2>
-              <p>Control The Website If There Is Maintenance</p>
+            <div class="main | card rad-m align-it-center f-wrap | m-d-flex m-p-5 ">
+              <div class="simple d-flex-col gap-10 align-it-center mt-20">
+                <img class=" rad-circle" src="imgs/avatar.png" alt="avatar">
+                <h3 class="txt-caps">hossam eldin</h3>
+                <p class="c-gray mb-5">Level 20</p>
+                <div class="holder | bg-lite rad-l">
+                  <span class="bg-mine d-block rad-l " style="width: 70%"></span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star c-orange fs-13"></i>
+                  <i class="fa-solid fa-star c-orange fs-13"></i>
+                  <i class="fa-solid fa-star c-orange fs-13"></i>
+                  <i class="fa-solid fa-star c-orange fs-13"></i>
+                  <i class="fa-solid fa-smile-wink c-orange  fs-13"></i>
+                  <i class="fa-solid fa-grin-squint-tears c-orange fs-13"></i>
+                </div>
+                <span class="rating c-gray fs-13 txt-caps">550 rating</span>
+              </div>
+              <div class="informations | w-full border-left ">
 
+                <div class="general | p-15 border-bottom">
+                  <h4 class="c-gray mb-20 fs-15">General Information</h4>
+                  <div class="info | txt-en gap-20">
+                    <p class="c-gray fs-14 fw">Full Name: <span class="c-mine txt-caps fw-bold">hossam eldin</span></p>
+                    <p class="c-gray fs-14">Gender: <span class="c-mine txt-caps fw-bold">male</span></p>
+                    <p class="c-gray fs-14">Country: <span class="c-mine txt-caps fw-bold">egypt</span></p>
+                    <div class="toggle">
+                      <label>
+                        <input type="checkbox" class="toggle-check" name="hos" checked>
+                        <div class="toggle-sw">
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
 
+                <div class="personal | p-15 border-bottom">
+                  <h4 class="c-gray mb-20 fs-15">personal Information</h4>
+                  <div class="info | txt-en gap-20">
+                    <p class="c-gray fs-14 fw">Email: <span class="c-mine fw-bold">email@website.com</span></p>
+                    <p class="c-gray fs-14">Phone: <span class="c-mine txt-caps fw-bold">0123456789</span></p>
+                    <p class="c-gray fs-14">Date Of Birth: <span class="c-mine txt-caps fw-bold">30/07/1989</span></p>
+                    <div class="toggle">
+                      <label>
+                        <input type="checkbox" class="toggle-check" name="hos" >
+                        <div class="toggle-sw">
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="jop | p-15 border-bottom">
+                  <h4 class="c-gray mb-20 fs-15">jop Information</h4>
+                  <div class="info | txt-en gap-20">
+                    <p class="c-gray fs-14 fw">Title: <span class="c-mine txt-caps fw-bold">front end developer</span></p>
+                    <p class="c-gray fs-14">Programming Language: <span class="c-mine txt-caps fw-bold">CSS</span></p>
+                    <p class="c-gray fs-14">Years Of Exp: <span class="c-mine txt-caps fw-bold">beginner</span></p>
+                    <div class="toggle">
+                      <label>
+                        <input type="checkbox" class="toggle-check" name="hos" checked>
+                        <div class="toggle-sw">
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="billing | p-15">
+                  <h4 class="c-gray mb-20 fs-15">billing Information</h4>
+                  <div class="info | txt-en gap-20">
+                    <p class="c-gray fs-14 fw">Payment Method: <span class="c-mine txt-caps fw-bold">paypal</span></p>
+                    <p class="c-gray fs-14">Email: <span class="c-mine fw-bold">email@website.com</span></p>
+                    <p class="c-gray fs-14">Subscription: <span class="c-mine txt-caps fw-bold">monthly</span></p>
+                    <div class="toggle">
+                      <label>
+                        <input type="checkbox" class="toggle-check" name="hos">
+                        <div class="toggle-sw">
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-
-            <!-- card two general info -->
-            <div class="general-info | card rad-m">
-              <h2>general info </h2>
-              <p>General Information About Your Account</p>
-
-
+            <!-- card two my skills -->
+            <div class="my-skills | card rad-m |">
+              <h2>my skills</h2>
+              <p>Complete Skills List</p>
+              <ul class=" ">
+                <li class="pk-10 border-bottom"><span class="label d-in-block w-fit m-5">HTML</span><span class="label d-in-block w-fit m-5">Pugjs</span><span class="label d-in-block w-fit m-5">HAML</span></li>
+                <li class="pk-10 border-bottom"><span class="label d-in-block w-fit m-5">CSS</span><span class="label d-in-block w-fit m-5">SASS</span><span class="label d-in-block w-fit m-5">Stylus</span></li>
+                <li class="pk-10 border-bottom"><span class="label d-in-block w-fit m-5">JavaScript</span><span class="label d-in-block w-fit m-5">TypeScript</span></li>
+                <li class="pk-10 border-bottom"><span class="label d-in-block w-fit m-5">Vuejs</span><span class="label d-in-block w-fit m-5">Reactjs</span></li>
+                <li class="pk-10 border-bottom"><span class="label d-in-block w-fit m-5">Jest</span><span class="label d-in-block w-fit m-5">Jasmine</span></li>
+                <li class="pk-10 border-bottom"><span class="label d-in-block w-fit m-5">PHP</span><span class="label d-in-block w-fit m-5">Laravel</span></li>
+                <li class="pk-10 "><span class="label d-in-block w-fit m-5">Python</span><span class="label d-in-block w-fit m-5">Django</span></li>
+              </ul>
             </div>
 
+            <!-- card three latest activities -->
+            <div class="activities | card rad-m">
+              <h2>Latest Activities</h2>
+              <p>Latest Activities Done By The User</p>
+              <div class="activities-content | mt-20 m-txt-cen">
 
-            <!-- card three security -->
-            <div class="Security-Info | card rad-m">
-              <h2>Security Info</h2>
-              <p>Security Information About Your Account</p>
+                <!-- first activity -->
+                <div class="activity | align-it-center gap-10 pb-20 mb-20 border-bottom | m-d-flex">
+                  <div class="img | rad-circle over-hidden">
+                    <img src="imgs/activity-01.png" alt="sass">
+                  </div>
+                  <div class="info | txt-caps">
+                    <h3 class="mb-10 fs-16">store</h3>
+                    <p class="fs-14 c-gray">Bought The Mastering Python Course</p>
+                  </div>
+                  <div class="time | m-left-auto txt-cen | m-m-cen">
+                    <span class="d-block mb-10">18:10</span>
+                    <span class="d-block fs-14 c-gray">Yesterday</span>
+                  </div>
+                </div>
 
 
-            </div>
+                <!-- second activity -->
+                <div class="activity | align-it-center gap-10 pb-20 mb-20 border-bottom | m-d-flex">
+                  <div class="img | rad-circle over-hidden">
+                    <img src="imgs/activity-02.png" alt="sass">
+                  </div>
+                  <div class="info | txt-caps">
+                    <h3 class="mb-10 fs-16">Academy</h3>
+                    <p class="fs-14 c-gray">Got The PHP Certificate</p>
+                  </div>
+                  <div class="time | m-left-auto txt-cen | m-m-cen">
+                    <span class="d-block mb-10">16:20</span>
+                    <span class="d-block fs-14 c-gray">Yesterday</span>
+                  </div>
+                </div>
 
-            <!-- card four social -->
-            <div class="Social-Info | card rad-m">
-              <h2>Social Info</h2>
-              <p>Social Media Information</p>
+                <!-- third activity -->
+                <div class="activity | align-it-center gap-10 pb-20 mb-20 border-bottom | m-d-flex">
+                  <div class="img | rad-circle over-hidden">
+                    <img src="imgs/activity-03.png" alt="sass">
+                  </div>
+                  <div class="info | txt-caps">
+                    <h3 class="mb-10 fs-16">Badges</h3>
+                    <p class="fs-14 c-gray">Unlocked The 10 Skills Badge</p>
+                  </div>
+                  <div class="time | m-left-auto txt-cen | m-m-cen">
+                    <span class="d-block mb-10">17:06</span>
+                    <span class="d-block fs-14 c-gray">Yesterday</span>
+                  </div>
+                </div>
+
+                <!-- fourth activity -->
+                <div class="activity | align-it-center gap-10 pb-20 mb-20 | m-d-flex">
+                  <div class="img | rad-circle over-hidden">
+                    <img src="imgs/activity-01.png" alt="sass">
+                  </div>
+                  <div class="info | txt-caps">
+                    <h3 class="mb-10 fs-16">Store</h3>
+                    <p class="fs-14 c-gray">Bought The Typescript Course</p>
+                  </div>
+                  <div class="time | m-left-auto txt-cen | m-m-cen">
+                    <span class="d-block mb-10">12:05</span>
+                    <span class="d-block fs-14 c-gray">Yesterday</span>
+                  </div>
+                </div>
 
 
+              </div>
             </div>
 
           </div>
+
         </section>
-        <!-- end dashboard tab  -->
+        <!-- end profile tab  -->
 
       </main>
     </div>
-
-
-
-
-
-
   </body>
 
 </html>

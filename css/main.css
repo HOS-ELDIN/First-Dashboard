@@ -107,14 +107,11 @@ body {
 }
 .three-columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.25rem;
 }
 @media (max-width: 767px) {
-  .two-columns {
-    grid-template-columns: minmax(200px, 1fr);
-    gap: 0.625rem;
-  }
+  .two-columns,
   .three-columns {
     grid-template-columns: minmax(200px, 1fr);
     gap: 0.625rem;
@@ -137,10 +134,6 @@ body {
   color: var(--gray-900);
   margin-bottom: 30px;
 }
-.card > h4 + p {
-  text-transform: capitalize;
-  color: var(--gray-900);
-}
 
 /* buttons  */
 .main-btn {
@@ -157,6 +150,11 @@ body {
   -moz-border-radius: var(--b-rad-s);
   -ms-border-radius: var(--b-rad-s);
   -o-border-radius: var(--b-rad-s);
+  transition: var(--transition-dur-short);
+  -webkit-transition: var(--transition-dur-short);
+  -moz-transition: var(--transition-dur-short);
+  -ms-transition: var(--transition-dur-short);
+  -o-transition: var(--transition-dur-short);
 }
 .main-btn:hover {
   background-color: var(--my-alt-color);
@@ -296,7 +294,7 @@ body {
     height: 2px;
     bottom: -20px;
     left: -5%;
-    background-color: black;
+    background-color: var(--gray-900);
   }
   .side-bar h3::after {
     width: 22px;
@@ -678,13 +676,20 @@ header .icons .img {
 /* end dashboard tab  */
 
 /* start setting tab  */
-
 /* start general info  */
-.general-info form input[type="email"] {
+input:disabled {
   cursor: not-allowed;
+  cursor: no-drop;
 }
-
 /* start social info  */
+.social-info .holder:focus-within {
+  border-width: 2px;
+  border-color: inherit;
+}
+.social-info .holder:focus-within i {
+  background-color: var(--bg-white);
+  color: inherit;
+}
 .social-info .holder i {
   border-right: 1px solid;
   border-color: inherit;
@@ -700,10 +705,12 @@ header .icons .img {
   appearance: none;
   display: none;
 }
+
 .widgets-conrol ul li label {
   position: relative;
   padding-left: 30px;
   margin-left: 20px;
+  cursor: pointer;
 }
 .widgets-conrol ul li label::before,
 .widgets-conrol ul li label::after {
@@ -713,16 +720,16 @@ header .icons .img {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-
+  width: 16px;
+  aspect-ratio: 1;
+  left: 0;
+  top: 50%;
+  margin-top: -8px;
+  outline: 2px solid var(--gray-900);
+  outline-offset: 2px;
 }
 .widgets-conrol ul li label::before {
   content: "";
-  outline: 2px solid var(--gray-900);
-  width: 17px;
-  aspect-ratio: 1;
-  left: 0;
-  top: .5px;
-
 }
 .widgets-conrol ul li label:hover::before {
   outline-color: var(--my-color);
@@ -737,16 +744,14 @@ header .icons .img {
   justify-content: center;
   align-items: center;
   color: var(--bg-white);
-  width: 15px;
-  aspect-ratio: 1;
-  left: 1px;
-  top: 1.5px;
-  transform: scale(0) rotate(360deg);
+
   transition: var(--transition-dur-short);
   -webkit-transition: var(--transition-dur-short);
   -moz-transition: var(--transition-dur-short);
   -ms-transition: var(--transition-dur-short);
   -o-transition: var(--transition-dur-short);
+
+  transform: scale(0) rotate(360deg);
   -webkit-transform: scale(0) rotate(360deg);
   -moz-transform: scale(0) rotate(360deg);
   -ms-transform: scale(0) rotate(360deg);
@@ -754,11 +759,211 @@ header .icons .img {
 }
 
 .widgets-conrol ul li input:checked + label::after {
-  outline: 2px solid var(--my-alt-color);
-  outline-offset: 1px;
   transform: scale(1);
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
 }
+
+/* card six Backup Manager */
+.backup ul li input {
+  appearance: none;
+  display: none;
+}
+.backup .timing li label {
+  position: relative;
+  padding-left: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.backup .timing li .custom::before,
+.backup .timing li .custom::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  aspect-ratio: 1;
+  left: 0;
+  top: 50%;
+  margin-top: -5px;
+  outline: 2px solid;
+  outline-color: var(--gray-900);
+  outline-offset: 3px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.backup .timing li .custom::after {
+  background-color: var(--my-color);
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transition: var(--transition-dur-short);
+  -webkit-transition: var(--transition-dur-short);
+  -moz-transition: var(--transition-dur-short);
+  -ms-transition: var(--transition-dur-short);
+  -o-transition: var(--transition-dur-short);
+}
+.backup .timing li label:hover .custom::before {
+  outline-color: var(--my-color);
+}
+.backup .timing li input:checked + .custom::after {
+  /* outline-color: var(--my-color); */
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+.backup .server li .ser {
+  min-width: 120px;
+  cursor: pointer;
+}
+.backup .server li label:hover {
+  outline: 2px solid var(--my-lite-color);
+  outline-offset: -6px;
+  /* color: var(--my-alt-color); */
+}
+.backup .server li input:checked + .ser {
+  color: var(--my-color);
+  border-width: 2px;
+  /* border-color: var(--my-color); */
+  border-color: var(--gray-900);
+  /* outline: 2px solid var(--my-lite-color); */
+  outline: 2px solid var(--my-color);
+  outline-offset: -6px;
+}
+/* end setting tab  */
+
+/* start profile tab  */
+/* main container  */
+.profile-tab .profile-content {
+  display: grid;
+  grid-template-areas: "main-profile main-profile" "skills activities";
+  gap: 20px;
+  grid-template-columns: 1fr 2fr;
+}
+@media (max-width: 991px) {
+  .profile-tab .profile-content {
+    grid-template-areas: "main-profile " "skills" "activities";
+    gap: 10px;
+    grid-template-columns: 1fr;
+  }
+}
+.profile-tab .profile-content .main {
+  grid-area: main-profile;
+}
+.profile-tab .profile-content .my-skills {
+  grid-area: skills;
+  min-width: 210px;
+}
+@media (max-width: 991px) {
+  .profile-tab .profile-content .my-skills ul {
+    text-align: center;
+  }
+}
+.profile-tab .profile-content .activities {
+  grid-area: activities;
+}
+
+/* main card  */
+.profile-tab .profile-content .main .simple {
+  flex-basis: 300px;
+  min-width: 200px;
+  flex: 1;
+}
+.profile-tab .profile-content .main .simple img {
+  width: 120px;
+}
+.profile-tab .profile-content .main .simple .holder {
+  width: 70%;
+  height: 5px;
+}
+.profile-tab .profile-content .main .simple span {
+  height: inherit;
+}
+
+/* ditailed info  */
+.profile-tab .profile-content .main .informations {
+  flex: 2;
+}
+@media (max-width:767px) {
+  .profile-tab .profile-content .main .informations {
+    border-left: none;
+  }
+}
+.profile-tab .profile-content .main .informations .info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+.profile-tab .profile-content .main .informations > div:hover  {
+  background-color: var(--my-lite-color);
+  --gray-700:#444;
+}
+.profile-tab .profile-content .main .informations .info p {
+  min-width: 200px;
+}
+
+/* activities card  */
+.activities .activity .img {
+  width: 64px;
+}
+/* end profile tab  */
+
+/* start projects tab  */
+.card > h4 {
+  text-transform: capitalize;
+  font-weight: normal;
+  margin-top: 5px;
+}
+.card > h4 + p {
+  text-transform: capitalize;
+  color: var(--gray-700);
+  margin: 10px 0 20px;
+  font-size: 14px;
+}
+.team-member-stacking img {
+  display: inline-block;
+  width: 40px;
+  aspect-ratio: 1;
+  border: 2px solid var(--bg-white);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: var(--transition-dur-short);
+  -webkit-transition: var(--transition-dur-short);
+  -moz-transition: var(--transition-dur-short);
+  -ms-transition: var(--transition-dur-short);
+  -o-transition: var(--transition-dur-short);
+}
+.team-member-stacking img:not(:first-child) {
+  margin-left: -15px;
+}
+.team-member-stacking:hover img:not(:first-child) {
+  margin-left: -10px;
+}
+.team-member-stacking img:hover {
+  position: relative;
+  z-index: 5;
+}
+.projects-tab .bar {
+  width: 60%;
+  height: 5px;
+}
+.projects-tab span.date {
+  top: 8px;
+  right: 10px;
+}
+
+
+
+
+
+
+/* end projects tab  */
