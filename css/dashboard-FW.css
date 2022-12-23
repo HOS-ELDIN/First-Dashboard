@@ -267,6 +267,9 @@ i {
 .mb-10 {
   margin-bottom: 10px;
 }
+.mb-15 {
+  margin-bottom: 15px;
+}
 .mb-20 {
   margin-bottom: 20px;
 }
@@ -281,6 +284,9 @@ i {
 }
 .w-full {
   width: 100%;
+}
+.w-64 {
+  width: 64px;
 }
 
 .svg-size {
@@ -395,6 +401,9 @@ i {
 .gray-border {
   border: 1px solid var(--gray-300);
 }
+.white-border {
+  border: 2px solid var(--bg-white);
+}
 .border-top {
   border-top: 1px solid var(--gray-300);
 }
@@ -483,6 +492,15 @@ i {
   font-weight: bold;
 }
 
+/* line heights */
+
+.lh-16 {
+  line-height: 1.6;
+}
+
+
+
+
 /* rtl  */
 .rtl {
   direction: rtl;
@@ -508,6 +526,22 @@ i {
 }
 .pos-abs {
   position: absolute;
+}
+.pos-xcen {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.pos-ycen {
+  top: 50%;
+  transform: translatey(-50%);
+  -webkit-transform: translatey(-50%);
+  -moz-transform: translatey(-50%);
+  -ms-transform: translatey(-50%);
+  -o-transform: translatey(-50%);
 }
 
 /* overflow  */

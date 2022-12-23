@@ -960,10 +960,17 @@ input:disabled {
   top: 8px;
   right: 10px;
 }
-
-
-
-
-
-
 /* end projects tab  */
+
+/* start courses tab  */
+.courses-tab .course .c-info {
+  bottom: -11px;
+}
+
+
+
+
+
+
+
+/* end courses tab  */
