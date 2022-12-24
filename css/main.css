@@ -925,6 +925,7 @@ input:disabled {
   color: var(--gray-700);
   margin: 10px 0 20px;
   font-size: 14px;
+  min-height: 33px;
 }
 .team-member-stacking img {
   display: inline-block;
@@ -951,6 +952,11 @@ input:disabled {
 .team-member-stacking img:hover {
   position: relative;
   z-index: 5;
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
 }
 .projects-tab .bar {
   width: 60%;
@@ -973,12 +979,17 @@ input:disabled {
   right: 20px;
   opacity: 0.5;
 }
-
 .friends-tab .friend .contact {
   top: -20px;
 }
 .friends-tab .friend .contact i {
   width: 33px;
+  cursor: pointer;
+  transition: var(--transition-dur-short);
+  -webkit-transition: var(--transition-dur-short);
+  -moz-transition: var(--transition-dur-short);
+  -ms-transition: var(--transition-dur-short);
+  -o-transition: var(--transition-dur-short);
 }
 .friends-tab .friend .contact i:hover {
   color: var(--bg-white);
