@@ -891,7 +891,7 @@ input:disabled {
 .profile-tab .profile-content .main .informations {
   flex: 2;
 }
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .profile-tab .profile-content .main .informations {
     border-left: none;
   }
@@ -900,9 +900,9 @@ input:disabled {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
 }
-.profile-tab .profile-content .main .informations > div:hover  {
+.profile-tab .profile-content .main .informations > div:hover {
   background-color: var(--my-lite-color);
-  --gray-700:#444;
+  --gray-700: #444;
 }
 .profile-tab .profile-content .main .informations .info p {
   min-width: 200px;
@@ -966,11 +966,110 @@ input:disabled {
 .courses-tab .course .c-info {
   bottom: -11px;
 }
-
-
-
-
-
-
-
 /* end courses tab  */
+
+/* start friends tab  */
+.friends-tab .friend .vip {
+  right: 20px;
+  opacity: 0.5;
+}
+
+.friends-tab .friend .contact {
+  top: -20px;
+}
+.friends-tab .friend .contact i {
+  width: 33px;
+}
+.friends-tab .friend .contact i:hover {
+  color: var(--bg-white);
+  background-color: var(--my-color);
+}
+.friends-tab .friend .del:hover {
+  color: var(--bg-white);
+  background-color: red;
+}
+/* end friends tab  */
+
+/* start plans tab  */
+.plans-tab .plan .head {
+  outline: 3px solid white;
+  outline-offset: -7px;
+}
+.plans-tab .plan .head .currency {
+  top: -16px;
+}
+.plans-tab .plan:first-of-type .help:hover {
+  color: var(--green-color);
+}
+.plans-tab .plan:nth-of-type(2) .help:hover {
+  color: var(--blue-color);
+}
+.plans-tab .plan:last-of-type .help:hover {
+  color: var(--orange-color);
+}
+/* end plans tab  */
+
+/* start files tab  */
+.files-tab .files-container {
+  display: flex;
+  gap: 20px;
+}
+.files-tab .files-container .files {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px,1fr));
+  gap: 20px;
+}
+.files-tab .files-container .files-stats {
+  width: 250px;
+  max-width: 100%;
+  margin-block: 0 auto;
+}
+@media (max-width: 767px) {
+  .files-tab .files-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .files-tab .files-container .files-stats {
+    width: 100%;
+  }
+  .files-tab .files-container .files {
+    order: 2;
+    gap: 10px;
+  }
+}
+.files-tab .files-stats li:last-child a:hover .up-arrow {
+  animation: bouncing 0.4s infinite alternate;
+  -webkit-animation: bouncing 0.4s infinite alternate;
+}
+@keyframes bouncing {
+  0% {
+    top: 2px;
+  }
+  100% {
+    top: -1px;
+  }
+}
+.files-tab .files .file:hover img {
+  transform: rotate(6deg);
+  -webkit-transform: rotate(6deg);
+  -moz-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  -o-transform: rotate(6deg);
+}
+.files-tab .files .file:hover img + p {
+  color: var(--my-color);
+  font-weight: 600;
+}
+.files-tab .files .file .download {
+  top: 15px;
+  left: 15px;
+}
+.files-tab .files .file .download:hover {
+color: var(--my-alt-color);
+}
+
+
+
+
+/* end files tab  */

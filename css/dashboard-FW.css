@@ -210,11 +210,17 @@ i {
 .p-20 {
   padding: 20px;
 }
+.pt-15 {
+  padding-top: 15px;
+}
 .pt-20 {
   padding-top: 20px;
 }
 .pb-10 {
   padding-bottom: 10px;
+}
+.pb-15 {
+  padding-bottom: 15px;
 }
 .pb-20 {
   padding-bottom: 20px;
@@ -224,6 +230,9 @@ i {
 }
 .pk-20 {
   padding-block: 20px;
+}
+.pl-10 {
+  padding-inline: 10px;
 }
 .pl-20 {
   padding-inline: 20px;
@@ -246,6 +255,9 @@ i {
   margin: 20px;
 }
 
+.mk-15 {
+  margin-block: 15px;
+}
 .mk-20 {
   margin-block: 20px;
 }
@@ -285,8 +297,14 @@ i {
 .w-full {
   width: 100%;
 }
+.w-40 {
+  width: 40px;
+}
 .w-64 {
   width: 64px;
+}
+.w-100 {
+  width: 100px;
 }
 
 .svg-size {
@@ -303,6 +321,9 @@ i {
 
 .no-resize {
   resize: none;
+}
+.aspect {
+  aspect-ratio: 1;
 }
 
 /* colors */
@@ -330,7 +351,7 @@ i {
   background-color: var(--green-color);
 }
 .bg-red {
-  background-color: var(--red-color);
+  background-color: var(--red-color) ;
 }
 .bg-gray {
   background-color: var(--gray-100);
@@ -456,6 +477,9 @@ i {
 .txt-caps {
   text-transform: capitalize;
 }
+.txt-upper {
+  text-transform: uppercase;
+}
 .txt-cen {
   text-align: center;
 }
@@ -468,7 +492,7 @@ i {
 /* sizes */
 .fs-13 {
   /* font-size: 13px; */
-  font-size: 0.813rem;
+  font-size: 0.813rem !important;
 }
 .fs-14 {
   /* font-size: 14px; */
@@ -482,9 +506,17 @@ i {
   /* font-size: 16px; */
   font-size: 1rem !important;
 }
+.fs-18 {
+  /* font-size: 18px; */
+  font-size: 1.125rem ;
+}
 .fs-25 {
   /* font-size: 25px; */
   font-size: 1.563rem;
+}
+.fs-40 {
+  /* font-size: 40px; */
+  font-size: 2.5rem;
 }
 
 /* weight */
@@ -554,6 +586,10 @@ i {
 .active {
   /* background-color: var(--bg-gray-hover); */
   background-color: var(--my-lite-color);
+}
+.btn:hover {
+  background-color: var(--my-alt-color);
+  font-weight: 600;
 }
 
 
